@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.1-dist/css/bootstrap.css">
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/technology-and-hardware-2-2/512/58-512.png" type="image/png">
+    <title>Newsweb</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="logo HNS ps-3">
+                        <h1>News<span>Web</span></h1>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="login">
+                        <ul class="d-lg-flex d-sm-none d-none align-content-center justify-content-end ">
+                            <li><i class="fa fa-question-circle" aria-hidden="true"></i></li>
+                            <li><button class="btn">Register</button></li>
+                            <li><button class="btn">Log in</button></li>
+                        </ul>
+                        <div class="thicon d-lg-none d-sm-flex d-md-flex d-flex align-content-center justify-content-end pe-3 pt-2">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="themenulistcont">
+                        <div class="menubox">
+                            <ul class="themenuitem d-flex align-content-center gap-3 ">
+                                <li id=0  ><a href="#NEWSPAGE">G20</a><span></span></li>
+                                <li id=1  ><a href="#NEWSPAGE">India</a><span></span></li>
+                                <li id=2  ><a href="#NEWSPAGE">World</a><span></span></li>
+                                <li id=3  ><a href="#NEWSPAGE">Business</a><span></span></li>
+                                <li id=4  ><a href="#NEWSPAGE">Tech</a><span></span></li>
+                                <li id=5  ><a href="#NEWSPAGE">Cricket</a><span></span></li>
+                                <li id=6  ><a href="#NEWSPAGE">Sports</a><span></span></li>
+                                <li id=7  ><a href="#NEWSPAGE">Entertainment</a><span></span></li>
+                                <li id=8  ><a href="#NEWSPAGE">bollywood</a><span></span></li>
+                                <li id=9  ><a href="#NEWSPAGE">TV</a><span></span></li>
+                                <li id=9  ><a href="#NEWSPAGE">ISRO</a><span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="marginbox pt-5"></div>
+    <div class="marginbox pt-5"></div>
+    <div class="marginbox pt-5"></div>
+    <!-- <div class="marginbox pt-5"></div> -->
+    <section  class="homback mt-5" >
+        <div class="container">
+            <div class="row">
+                <div class="col-12" width = "100%" height = "100%">
+                    <div class="headetbox d-flex align-items-start  justify-content-center flex-column " width = "100%" height = "100%">
+                        <h1>Read News with News<span>Web</span></h1>
+                        <p>websites that provide timely news coverage, expert opinion, and <br> other information about recent and important events.</p>
+                        <div class="theserch mt-3">
+                            <input type="text" placeholder="Search more News..." class="theinput">
+                            <button class="btn" onclick="searchNews()">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="NEWSPAGE" class="thenewbox mt-5">
+        <div class="container">
+            <div class="row thenewsdata"></div>
+        </div>
+    </section>
+    <script src="func.js"></script>
+</body>
+</html>

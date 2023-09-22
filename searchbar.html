@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            -webkit-transition: .2s linear;
+            transition: .2s linear;
+        }
+
+        input::placeholder{
+            color: #4a4b4b;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        button{
+            cursor: pointer;
+        }
+        body{
+            background: #244d4d;
+        }
+        section{
+            width: 40rem;
+            position: absolute;
+            top: 30%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            background-color: #eaf3f3;
+            padding: 1.5rem;
+            border-radius: .5rem;
+        }
+
+        section > .searchbar{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        section > .searchbar > input{
+            padding: 1rem .5rem;
+            width: 80%;
+            background: transparent;
+            border-bottom: 1.5px solid #244d4d;
+            color: #244d4d;
+        }
+
+        input::placeholder{
+            color: #244d4d;
+        }
+
+        section > .searchbar > button{
+            background: transparent;
+            color: #244d4d;
+        }
+
+        section > #desplaybox {
+            width: 97%;
+            margin: auto;
+            margin-top:1rem ;
+        }
+
+        section > #desplaybox > ul{
+            list-style: none;
+            font-size: 1.3rem;
+            line-height: 3rem;
+        }
+
+        .contendbox{
+            width: 100%;
+            margin: 1rem;
+        }
+
+        .probox{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .probox img{
+            object-fit: cover;
+            width: 20%;
+            height: 100%;
+        }
+
+        .probox .rigth{
+            width: 100%;
+        }
+
+        .probox .rigth h1{
+            font-size: 1.4rem ;
+            font-weight: 400;
+            color: #244d4d;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="searchbar">
+            <input type="text" id="input-box" placeholder="Search....">
+            <button id="serarchbtn"><i class="fa-solid fa-magnifying-glass" id="i"></i></button>
+        </div>
+        <p id="keyname"></p>
+        <div id="desplaybox">
+            
+        </div>
+    </section>
+<a href=""></a>
+    <script>
+        const product = [
+            {name : "God King Garen,New Skills", imgsrc : "god_king_garen.jpg"},
+            {name : "god king darius,<br>New Skills", imgsrc : "god_king_darius.jpg"},
+            {name : "Uncharted 4 : A Thief's End,New Skills", imgsrc : "uncharded.jpg"},
+            {name : "gun doddess miss fortune,", imgsrc : "gun_doddess.jpg"},
+            {name : "Eclipse Leona", imgsrc : "eclips_leona.webp"}
+        ];
+
+        const inputbar = document.getElementById("input-box");
+        const desplaybox = document.getElementById("desplaybox");
+        const keyname = document.getElementById("keyname");
+
+        inputbar.addEventListener("keyup", () =>{
+            let inputval = inputbar.value;
+            let result = []
+
+            if(inputval.length){
+                result = product.filter(val =>{
+                    return val.name.toUpperCase().includes(inputval.toUpperCase())
+                })
+                desply(result)
+            }
+        })
+
+        const desply = (result) =>{
+            const contend = result.map(list =>{
+                return `<div class="contendbox">
+                            <a href="#" class="probox">
+                                <img src="${list.imgsrc}" alt="">
+                                <div class="rigth">
+                                    <h1>${list.name}</h1>
+                                </div>
+                            </a>
+                        </div>`
+            })
+            desplaybox.innerHTML = `${contend.join("")}`
+        };
+    </script>
+</body>
+</html>
