@@ -295,6 +295,13 @@ header{
 .thecardcont .cardbox .textbox p{
     font-size: 1.2rem;
 }
+.menubox{
+    overflow-x:scroll ;
+}
+
+.menubox::-webkit-scrollbar{
+    width: 0;
+}
 
 @media(max-width:600px) {
     .navul{
@@ -309,13 +316,6 @@ header{
         background: #f0eeee;
     }
 
-    .menubox{
-        overflow-x:scroll ;
-    }
-
-    .menubox::-webkit-scrollbar{
-        width: 0;
-    }
 }
 
 
