@@ -7,10 +7,333 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/technology-and-hardware-2-2/512/58-512.png" type="image/png">
     <title>Newsweb</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Cormorant+SC:wght@500&family=Gentium+Book+Plus:ital@0;1&family=Lora:ital,wght@0,500;0,600;1,400&family=Merriweather:ital,wght@1,400;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,600&family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Poppins:ital,wght@0,100;0,300;0,500;1,100;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap');
+html, body {
+    font-size: 62.5%;
+    margin: 0;
+    background-color: #f0f1f2;
+
+}
+
+html::-webkit-scrollbar {
+        width: .6rem;
+}
+    
+html::-webkit-scrollbar-track {
+        background: transparent;
+}
+    
+html::-webkit-scrollbar-thumb {
+        background: orangered;
+}
+
+
+
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Bona Nova', serif;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Gentium Book Plus', serif;
+    font-family: 'Lora', serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    outline: none;  
+    border:none; 
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .5s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+
+
+header{
+    position: fixed;
+    padding-top: 2rem;
+    width: 100%;
+    height: 13rem;
+    z-index: 999;
+    background: #ffffff;
+    box-shadow: 0 0 4px #5b5d5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.headbox{
+    width: 85.8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navhedser{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: row-reverse; */
+}
+
+.HNS{
+    width: 33.3%;
+}
+
+.hambtn,
+.searchicon{
+    display: none;
+}
+
+.section{
+    margin-top: 30rem;
+}
+
+.navul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+.hambtn{
+    display: none;
+}
+.logo h1{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.logo h1 span{
+    color: orangered;
+}
+
+.navbaritem ul{
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.navbaritem ul li{
+    width: 8rem;
+    text-align: center;
+}
+
+.navbaritem ul a{
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+.navbaritem ul li .aline{
+    margin: auto;
+    width:0%;
+    height: .1rem;
+    background: orangered;
+}
+
+.navbaritem ul li:hover .aline{
+    width: 90%;
+}
+
+
+.login ul{
+    list-style: none;
+    gap: 5rem;
+}
+
+.login ul li:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.thicon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 1rem; */
+    font-size: 1.8rem;
+}
+
+.menubox ul{
+    margin-top: 2rem;
+    list-style: none;
+    margin-left: -2rem;
+    
+}
+
+.menubox li{
+    height: 3rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.menubox li span{
+    transition: all .5s ease-in-out;
+    width: 0;
+}
+
+.menubox li a{
+    background: transparent;
+    text-decoration: none;
+    padding: .6rem 2rem;
+    border-radius: 50rem;
+    color: rgb(55, 53, 53);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.menubox li:hover a{
+    color: orangered;
+}
+
+.menubox li:hover span{
+    display: block;
+    height: .2rem;
+    background: orangered;
+    width: 100%;
+}
+
+
+.login ul button{
+    font-size: 1.4rem;
+    color: #f0f1f2;
+    background-color: orangered;
+}
+
+
+/* #################################################3Home######################################3 */
+
+.homback{
+    background-image: url(https://miro.medium.com/v2/resize:fit:1000/1*pk-_5YfwNsLQCuqBydi_0w.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50rem;
+    width: 100%;
+}
+
+.headetbox{
+    margin-top: 13rem;
+    height: 20rem;
+    width: 100%;
+}
+
+.headetbox h1{
+    font-size: 3.5rem;
+    color: #f0f1f2;
+}
+
+.headetbox p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #f0eeee;
+}
+
+
+.headetbox h1 span{
+    color: orangered;
+}
+
+.theserch{
+    background: #f0f1f2;
+    display: flex;
+    align-items: center;
+    width: 35rem;
+    padding:.5rem;
+    border-radius: .5rem;
+}
+
+.theserch input{
+    width: 80%;
+    padding: 1rem .5rem;
+    background: transparent;
+    font-size: 1.3rem;
+}
+
+.theserch button{
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    color: #f0f1f2;
+    padding: .7rem 1rem;
+    background: orangered;
+}
+
+
+
+.thecardcont .cardbox{
+    box-shadow: 0 0 4px #bdbebe;
+    height: 100%;
+    width: 100%;
+}
+
+.thecardcont > a{
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+.thecardcont .cardbox .imgbox{
+    width: 100%;
+    height: 60%;
+}
+
+.thecardcont .cardbox .imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thecardcont .cardbox .textbox{
+    padding: .6rem;
+    overflow: hidden;
+}
+
+.thecardcont .cardbox .textbox h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.thecardcont .cardbox .textbox p{
+    font-size: 1.2rem;
+}
+.menubox{
+    overflow-x:scroll ;
+}
+
+.menubox::-webkit-scrollbar{
+    width: 0;
+}
+
+@media(max-width:600px) {
+    .navul{
+        top: 10rem;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        flex-direction: column;
+        width: 50%;
+        height: 60rem;
+        background-color: #f0f1f2;
+        background: #f0eeee;
+    }
+
+}
+
+
+
+
+    </style>
 </head>
 <body>
     <header>
@@ -84,7 +407,58 @@
             <div class="row thenewsdata"></div>
         </div>
     </section>
-    <script src="func.js"></script>
-    
+    <script>
+        // ##########################################newsapi###########################################33
+
+window.addEventListener("load",() => thefethdata('india'))
+
+const thenewsdata = document.querySelector(".thenewsdata")
+async function thefethdata(quary){
+    console.log(quary)
+    const response = await fetch(`https://newsapi.org/v2/everything?q=${quary}&apiKey=ee4f8b282ef9473a8c694fd21caa11fd`)
+        const data = await response.json()
+        let thaarrdata = data["articles"]
+        console.log(thaarrdata)
+        let themaindata = thaarrdata.map(ele =>{
+            return(
+            `<div class = "thecardcont col-sm-12 col-md-6 col-lg-4 mt-5" 
+                <a href = ${ele.url}>
+                    <div class="cardbox">
+                        <div class="imgbox">
+                            <img src=${ele.urlToImage} />
+                        </div>
+                        <div class="textbox">
+                            <h1>${ele.title}</h1>
+                            <p>${ele.description}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>`)
+        })
+        thenewsdata.innerHTML = themaindata.join(" ")
+}
+
+/*##################################thisisfornavbtn#########################################*/
+
+const themenuitem = document.querySelectorAll(".themenuitem li")
+
+themenuitem.forEach((iten, index) =>{
+    iten.addEventListener("click", () =>{
+        if(Number(iten.id) === index){
+            thefethdata(iten.textContent)
+        }
+    })
+})
+
+/*###################################This for the search box########################################*/
+
+
+const searchNews = () =>{
+    const theinput = document.querySelector(".theinput").value
+    thefethdata(theinput)
+}
+
+
+    </script>
 </body>
 </html>
